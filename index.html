@@ -9,21 +9,17 @@
 
 <body>
 
-  <h2>JavaScript Objects</h2>
-  <p>If you access an object method without (), it will return the function definition:</p>
-  <p id="demo"></p>
+  <h1>JavaScript String Methods</h1>
+  <p>Replace all occurrences of "Microsoft" with "Academy" in the paragraph below:</p>
+  <button onclick="myFunction()">Try it</button>
+  <p id="demo">Please visit Microsoft and Microsoft!</p>
   <script>
-    const person = {
-      firstName: "John",
-      lastName: "Doe",
-      id: 5566,
-      fullName: function () {
-        return this.firstName + " " + this.lastName;
-      }
-    };
-    document.getElementById("demo").innerHTML = person.fullName();
+    function myFunction() {
+      let text = document.getElementById("demo").innerHTML;
+      document.getElementById("demo").innerHTML =
+        text.replace(/Microsoft/g, "Academy");
+    }
   </script>
-
 
 </body>
 
