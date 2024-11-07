@@ -9,14 +9,19 @@
 
 <body>
 
-  <h1>Array includes()</h1>
-  <p>Check if the fruit array contains "Mango":</p>
+  <h2>JavaScript For Of Loop</h2>
+  <p>The for of statement loops through the values of any iterable object:</p>
   <p id="demo"></p>
-  <p><strong>Note:</strong> The includes method is not supported in Edge 13 (and earlier
-    versions).</p>
   <script>
-    const fruits = ["Banana", "Orange", "Apple", NaN];
-    document.getElementById("demo").innerHTML = fruits.includes(NaN);
+    const cars = ["BMW", "Volvo", "Mini"];
+    let text = "";
+    for (let x of cars) {
+      console.log(x);
+      text += x + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
   </script>
+
 </body>
+
 </html>
