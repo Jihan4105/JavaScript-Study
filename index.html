@@ -9,16 +9,14 @@
 
 <body>
 
-  <h1>JavaScript Strings</h1>
-  <h2>The trimStart() Method</h2>
+  <h1>Array includes()</h1>
+  <p>Check if the fruit array contains "Mango":</p>
   <p id="demo"></p>
+  <p><strong>Note:</strong> The includes method is not supported in Edge 13 (and earlier
+    versions).</p>
   <script>
-    let text1 = "     Hello World!     ";
-    let text2 = text1.trimStart();
-    document.getElementById("demo").innerHTML =
-      "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length; 
+    const fruits = ["Banana", "Orange", "Apple", NaN];
+    document.getElementById("demo").innerHTML = fruits.includes(NaN);
   </script>
-
 </body>
-
 </html>
