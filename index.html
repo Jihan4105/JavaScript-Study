@@ -9,16 +9,24 @@
 
 <body>
 
-  <h1>JavaScript Modules</h1>
+  <h2>JavaScript Functions</h2>
+  <p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
   <p id="demo"></p>
-  <script type="module">
-     let text = '{ "employees" : [' +
-        '{ "firstName":"John" , "lastName":"Doe" },' +
-        '{ "firstName":"Anna" , "lastName":"Smith" },' +
-        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-      const obj = JSON.parse(text);
-      console.log(text);
-      console.log(obj);
+  <script>
+     // This is a function constructor:
+      function myFunction(arg1, arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+      }
+      // This creates a new object
+      const myObj = new myFunction("John", "Doe");
+      // This will return "John"
+      console.log(myObj);
+
+      const myObj2 = {firstName: "John", lastName: "Doe"};
+
+      console.log(myObj2);
   </script>
+
 
 </html>
