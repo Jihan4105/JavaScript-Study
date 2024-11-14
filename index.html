@@ -9,24 +9,37 @@
 
 <body>
 
-  <h2>JavaScript Functions</h2>
-  <p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+  <h2>JavaScript Class Inheritance</h2>
+  <p>Use the "extends" keyword to inherit all methods from another class.</p>
+  <p>Use the "super" method to call the parent's constructor function.</p>
   <p id="demo"></p>
   <script>
-     // This is a function constructor:
-      function myFunction(arg1, arg2) {
-        this.firstName = arg1;
-        this.lastName = arg2;
+    class Car {
+      constructor(owner, brand, age) {
+        this.owner = owner;
+        this.carname = brand;
+        this.age = age;
       }
-      // This creates a new object
-      const myObj = new myFunction("John", "Doe");
-      // This will return "John"
-      console.log(myObj);
-
-      const myObj2 = {firstName: "John", lastName: "Doe"};
-
-      console.log(myObj2);
+      present() {
+        return 'I have a ' + this.carname;
+      }
+    }
+    class Model extends Car {
+      constructor(owner, brand, age, mod) {
+        super(owner, brand, age);
+        this.model = mod;
+      }
+      show() {
+        // let a=this;
+        // debugger;
+        return this.present() + ', it is a ' + this.model + '</br>' + 
+                  ' and the owner of it is ' + this.owner + '</br>' +
+                  ' the age of the car is ' + this.age;
+      }
+    }
+    let myCar = new Model("John Doe", "Food", 2020, "FoodEvail");
+    document.getElementById("demo").innerHTML = myCar.show();
   </script>
 
-
+</body>
 </html>
